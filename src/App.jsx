@@ -1,0 +1,111 @@
+import React from "react";
+import { motion } from "framer-motion";
+import './App.css'
+
+const PHONE = "+972501234567"; // tel: link
+const DISPLAY_PHONE = "+972 50 123 4567"; // displayed to users
+const CREATOR_NAME = "Yassmine Machour"; // footer credit
+
+
+const GOOGLE_FORM_EMBED_URL =
+  "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true";
+
+
+  // Location coordinates
+const MAP_LAT = 31.7683;
+const MAP_LNG = 35.2137;
+
+const AI_IMAGE_PATH = "/doctor-dentist-ai.jpg";
+function openMaps(app = "google") {
+  const lat = MAP_LAT;
+  const lng = MAP_LNG;
+
+  if (app === "google") {
+    window.open(
+      `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`,
+      "_blank"
+    );
+  } else if (app === "waze") {
+    window.open(`https://waze.com/ul?ll=${lat}%2C${lng}&navigate=yes`, "_blank");
+  } else {
+    window.open(`geo:${lat},${lng}?q=${lat},${lng}`, "_blank");
+  }
+}
+function App() {
+
+  return (
+    <>
+       <div className="app">
+      {/* Header */}
+      <header className="header">
+        <h1 className="logo">Premium Clinic</h1>
+        <a href={`tel:${PHONE}`} className="call-btn">
+          📞 {DISPLAY_PHONE}
+        </a>
+      </header>
+
+      {/* Main content */}
+      <main className="main">
+        {/* Left - Team */}
+        <motion.section
+          className="card"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2>Friendly Team</h2>
+          <p>Meet our professional doctor and dentist.</p>
+          <img
+            src={AI_IMAGE_PATH}
+            alt="Doctor and dentist smiling"
+            onError={(e) =>
+              (e.currentTarget.src =
+                "https://via.placeholder.com/600x400?text=Add+your+AI+image")
+            }
+          />
+        </motion.section>
+
+        {/* Right - Contact */}
+        <section className="card">
+          <h2>Contact & Location</h2>
+          <p>Find us easily using your favorite maps app.</p>
+          <div className="map-buttons">
+            <button onClick={() => openMaps("google")}>Open in Google Maps</button>
+            <button onClick={() => openMaps("waze")}>Open in Waze</button>
+          </div>
+          <p className="small-text">
+            Or tap to call us: <a href={`tel:${PHONE}`}>{DISPLAY_PHONE}</a>
+          </p>
+        </section>
+
+        {/* Full width - Google Form */}
+        <section className="card form-card">
+          <h2>Book an Appointment</h2>
+          <iframe
+            src={GOOGLE_FORM_EMBED_URL}
+            title="Google Form"
+            frameBorder="0"
+            marginHeight="0"
+            marginWidth="0"
+          >
+            Loading…
+          </iframe>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>
+          Created by <strong>{CREATOR_NAME}</strong>
+        </p>
+        <p>
+          Contact me: <a href={`tel:${PHONE}`}>{DISPLAY_PHONE}</a>
+        </p>
+      </footer>
+    </div>
+      
+    </>
+  )
+}
+
+export default App
