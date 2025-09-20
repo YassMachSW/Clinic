@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import WhatsAppButton from "./WhatsAppButton"
 import './App.css'
 
 const PHONE = "+972501234567"; // tel: link
@@ -42,6 +43,8 @@ function App() {
         <a href={`tel:${PHONE}`} className="call-btn">
           📞 {DISPLAY_PHONE}
         </a>
+
+          <WhatsAppButton />
       </header>
 
       {/* Main content */}
