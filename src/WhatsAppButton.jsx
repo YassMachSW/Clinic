@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import "./WhatsAppButton.css"; // נוסיף קובץ CSS קטן
 
 export default function WhatsAppButton() {
-  const [phone, setPhone] = useState("");
+//   const [phone, setPhone] = useState("");
+const phone="972545317545";
   const message="שלום! אני מתעניין באתר שלך";
 //   const [message, setMessage] = useState("שלום! אני מתעניין באתר שלך");
   const sendWhatsApp = () => {
@@ -19,13 +20,13 @@ export default function WhatsAppButton() {
     <div className="whatsapp-container">
       <h6 className="whatsapp-title">שליחת הודעת WhatsApp</h6>
 
-      <input
+      {/* <input
         type="text"
         className="whatsapp-input"
         placeholder="לדוגמה: 972501234567"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
-      />
+      /> */}
 
       {/* <textarea
         className="whatsapp-textarea"
