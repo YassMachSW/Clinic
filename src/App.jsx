@@ -9,7 +9,7 @@ const CREATOR_NAME = "Yassmine Machour"; // footer credit
 
 
 const GOOGLE_FORM_EMBED_URL =
-  "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true";
+  "https://docs.google.com/forms/d/e/1FAIpQLSeSFfRXpwNJzcT8udzz_3SHh3Nc2iykoHneQkxsujiMlkTOgw/viewform?usp=dialog";
 
 
   // Location coordinates
