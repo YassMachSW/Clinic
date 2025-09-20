@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./WhatsAppButton.css"; // נוסיף קובץ CSS קטן
 
 export default function WhatsAppButton() {
   const [phone, setPhone] = useState("");
@@ -11,39 +12,29 @@ export default function WhatsAppButton() {
     }
     const encodedMessage = encodeURIComponent(message);
     const url = `https://wa.me/${phone}?text=${encodedMessage}`;
-    window.open(url, "_blank"); // פותח חלון חדש ל־WhatsApp
+    window.open(url, "_blank");
   };
 
   return (
-    <div style={{ marginTop: "2rem", textAlign: "center" }}>
-      <h2>שליחת הודעת WhatsApp</h2>
+    <div className="whatsapp-container">
+      <h2 className="whatsapp-title">שליחת הודעת WhatsApp</h2>
+
       <input
         type="text"
+        className="whatsapp-input"
         placeholder="לדוגמה: 972501234567"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
-        style={{ padding: "10px", width: "250px", marginBottom: "10px" }}
       />
-      <br />
+
       <textarea
+        className="whatsapp-textarea"
         placeholder="כתוב כאן את ההודעה שלך"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        style={{ padding: "10px", width: "250px", height: "80px", marginBottom: "10px" }}
       />
-      <br />
-      <button
-        onClick={sendWhatsApp}
-        style={{
-          backgroundColor: "#25D366",
-          color: "white",
-          border: "none",
-          padding: "10px 20px",
-          borderRadius: "8px",
-          cursor: "pointer",
-          fontSize: "16px"
-        }}
-      >
+
+      <button className="whatsapp-button" onClick={sendWhatsApp}>
         שלח WhatsApp
       </button>
     </div>
