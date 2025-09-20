@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
 
   return (
     <div className="whatsapp-container">
-      <h2 className="whatsapp-title">שליחת הודעת WhatsApp</h2>
+      <h6 className="whatsapp-title">שליחת הודעת WhatsApp</h6>
 
       <input
         type="text"
