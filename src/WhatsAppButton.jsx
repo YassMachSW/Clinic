@@ -3,8 +3,8 @@ import "./WhatsAppButton.css"; // נוסיף קובץ CSS קטן
 
 export default function WhatsAppButton() {
   const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("שלום! אני מתעניין באתר שלך");
-
+  const message="שלום! אני מתעניין באתר שלך";
+//   const [message, setMessage] = useState("שלום! אני מתעניין באתר שלך");
   const sendWhatsApp = () => {
     if (!phone) {
       alert("נא להזין מספר טלפון עם קידומת בינלאומית");
@@ -27,12 +27,12 @@ export default function WhatsAppButton() {
         onChange={(e) => setPhone(e.target.value)}
       />
 
-      <textarea
+      {/* <textarea
         className="whatsapp-textarea"
         placeholder="כתוב כאן את ההודעה שלך"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-      />
+      /> */}
 
       <button className="whatsapp-button" onClick={sendWhatsApp}>
         שלח WhatsApp
