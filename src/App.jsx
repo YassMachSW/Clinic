@@ -44,7 +44,7 @@ function App() {
           📞 {DISPLAY_PHONE}
         </a>
 
-          <WhatsAppButton />
+          
       </header>
 
       {/* Main content */}
@@ -67,7 +67,7 @@ function App() {
             }
           />
         </motion.section>
-
+        <WhatsAppButton />
         {/* Right - Contact */}
         <section className="card">
           <h2>Contact & Location</h2>
