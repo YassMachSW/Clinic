@@ -3,9 +3,13 @@ import { motion } from "framer-motion";
 import WhatsAppButton from "./WhatsAppButton"
 import './App.css'
 
-const PHONE = "+972501234567"; // tel: link
-const DISPLAY_PHONE = "+972 50 123 4567"; // displayed to users
+const CPHONE = "+97249913934"; // tel: link
+
+const PHONE = "+972545317545"; // tel: link
+
+const DISPLAY_PHONE = "+972 545317545"; // displayed to users
 const CREATOR_NAME = "Yassmine Machour"; // footer credit
+const DISPLAY_CPHONE = "+972 49913934"; // displayed to users
 
 
 const GOOGLE_FORM_EMBED_URL =
@@ -13,8 +17,8 @@ const GOOGLE_FORM_EMBED_URL =
 
 
   // Location coordinates
-const MAP_LAT = 31.7683;
-const MAP_LNG = 35.2137;
+const MAP_LAT = 32.92695963235956;
+const MAP_LNG = 35.07578021337072;
 
 const AI_IMAGE_PATH = "/doctor-dentist-ai.jpg";
 function openMaps(app = "google") {
@@ -40,8 +44,8 @@ function App() {
       {/* Header */}
       <header className="header">
         <h1 className="logo">Premium Clinic</h1>
-        <a href={`tel:${PHONE}`} className="call-btn">
-          📞 {DISPLAY_PHONE}
+        <a href={`tel:${CPHONE}`} className="call-btn">
+          📞 {DISPLAY_CPHONE}
         </a>
 
           
@@ -77,7 +81,7 @@ function App() {
             <button onClick={() => openMaps("waze")}>Open in Waze</button>
           </div>
           <p className="small-text">
-            Or tap to call us: <a href={`tel:${PHONE}`}>{DISPLAY_PHONE}</a>
+            Or tap to call us: <a href={`tel:${CPHONE}`}>{DISPLAY_CPHONE}</a>
           </p>
         </section>
 
