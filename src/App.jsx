@@ -191,6 +191,19 @@ function App() {
             Contact me: <a href={`tel:${PHONE}`}>{DISPLAY_PHONE}</a>
           </p>
         </footer>
+      {/* Accessibility Panel */}
+<div className="accessibility-panel">
+  <button onClick={() => document.body.classList.toggle("high-contrast")}>נ</button>
+  <button onClick={() => {
+    const current = parseInt(document.body.style.fontSize || "16");
+    document.body.style.fontSize = `${current + 2}px`;
+  }}>+</button>
+  <button onClick={() => {
+    const current = parseInt(document.body.style.fontSize || "16");
+    document.body.style.fontSize = `${current - 2}px`;
+  }}>-</button>
+</div>
+
       </div>
     </>
   );
