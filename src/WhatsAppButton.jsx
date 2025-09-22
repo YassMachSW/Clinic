@@ -1,7 +1,7 @@
 import "./WhatsAppButton.css"; // נוסיף קובץ CSS קטן
 
 export default function WhatsAppButton() {
-const phone="972545317545";
+const phone="972526979027";
   const message="שלום! אני מתעניין באתר שלך";
   const sendWhatsApp = () => {
     if (!phone) {

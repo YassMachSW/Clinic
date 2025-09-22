@@ -21,6 +21,26 @@ const MAP_LAT = 32.92695963235956;
 const MAP_LNG = 35.07578021337072;
 
 const AI_IMAGE_PATH = "/doctor-dentist-ai.jpg";
+function downloadVCard() {
+  const vcardData = `
+BEGIN:VCARD
+VERSION=3.0
+FN:מרפאת משעור
+TEL;TYPE=work,voice:046388395
+END:VCARD
+  `.trim();
+
+  const blob = new Blob([vcardData], { type: "text/vcard" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "contact.vcf";
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
+
 function openMaps(app = "google") {
   const lat = MAP_LAT;
   const lng = MAP_LNG;
@@ -50,7 +70,20 @@ function App() {
 
           
       </header>
+<section className="card">
+  <h2>Contact & Location</h2>
+  <p>Find us easily using your favorite maps app.</p>
+  <div className="map-buttons">
+    <button onClick={() => openMaps("google")}>Open in Google Maps</button>
+    <button onClick={() => openMaps("waze")}>Open in Waze</button>
+  </div>
+  <p className="small-text">
+    Or tap to call us: <a href={`tel:${CPHONE}`}>{DISPLAY_CPHONE}</a>
+  </p>
 
+  {/* Save Contact Button */}
+  <button onClick={downloadVCard}>💾 Save Contact</button>
+</section>
       {/* Main content */}
       <main className="main">
         {/* Left - Team */}
