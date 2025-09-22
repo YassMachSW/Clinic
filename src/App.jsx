@@ -16,7 +16,7 @@ const GOOGLE_FORM_EMBED_URL =
 const MAP_LAT = 32.92695963235956;
 const MAP_LNG = 35.07578021337072;
 
-const AI_IMAGE_PATH = "/doctor-dentist-ai.jpg";
+const AI_IMAGE_PATH = "/BOTH.png";
 
 function openMaps(app = "google") {
   const lat = MAP_LAT;
@@ -90,7 +90,7 @@ function App() {
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <img
-                  src="/sahar.jpg"
+                  src="/SAHAR.jpg"
                   alt="Sahar - Dentist"
                   className="doctor-img"
                   onError={(e) =>
@@ -112,7 +112,7 @@ function App() {
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
                 <img
-                  src="/camille.jpg"
+                  src="/CAMILLE.jpg"
                   alt="Camille - Family Doctor"
                   className="doctor-img"
                   onError={(e) =>
