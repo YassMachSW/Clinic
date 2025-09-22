@@ -1,16 +1,17 @@
 /* Global styles */
-body,
-html,
+html, body,
 #root {
   margin: 0;
   padding: 0;
   font-family: system-ui, Arial, sans-serif;
-  background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
+  /* רקע גרדיאנט בכחולים */
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6, #60a5fa, #93c5fd);
   min-height: 100%;
   color: #111827;
-    direction: rtl;   /* כיוון הטקסט */
+  direction: rtl;   /* כיוון הטקסט */
   text-align: right; /* יישור טקסט */
 }
+
 .card, .doctor-card, .footer, .header {
   direction: rtl;
   text-align: right;
@@ -108,9 +109,9 @@ html,
   object-fit: contain; /* לשמור על הפרופורציות */
 }
 
-.map-buttons button:hover {
+/* .map-buttons button:hover {
   background: #e0f2fe;
-}
+} */
 
 .form-card iframe {
   width: 100%;
