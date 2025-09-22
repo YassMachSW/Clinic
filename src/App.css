@@ -8,7 +8,14 @@ html,
   background: linear-gradient(to bottom right, #ffffff, #f3f4f6);
   min-height: 100%;
   color: #111827;
+    direction: rtl;   /* כיוון הטקסט */
+  text-align: right; /* יישור טקסט */
 }
+.card, .doctor-card, .footer, .header {
+  direction: rtl;
+  text-align: right;
+}
+
 
 /* Layout */
 .app {

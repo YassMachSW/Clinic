@@ -5,9 +5,9 @@ import "./App.css";
 
 const CPHONE = "+97246388395"; // tel: link
 const PHONE = "+972545317545"; // tel: link
-const DISPLAY_PHONE = "+972 545317545"; // displayed to users
+const DISPLAY_PHONE = "0545317545"; // displayed to users
 const CREATOR_NAME = "Yassmine Machour"; // footer credit
-const DISPLAY_CPHONE = "+972 46388395"; // displayed to users
+const DISPLAY_CPHONE = "046388395"; // displayed to users
 
 const GOOGLE_FORM_EMBED_URL =
   "https://docs.google.com/forms/d/e/1FAIpQLSebCBQZM_ZeiKyGwekXw4Xcy74tjTzU2T_fhWuAT9rG7B_C5g/viewform?usp=sharing&ouid=117001172827928974203";
