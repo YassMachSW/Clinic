@@ -40,7 +40,7 @@ function App() {
       <div className="app">
         {/* Header */}
         <header className="header">
-          <h1 className="logo">מרפאת משעור</h1>
+          <h3 className="logo">מרפאת משעור</h3>
           <a href={`tel:${CPHONE}`} className="call-btn">
             📞 {DISPLAY_CPHONE}
           </a>
@@ -57,8 +57,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2>צוות רופאים מקצועי</h2>
-            <p>Meet our professional doctor and dentist.</p>
+            <center><h2>צוות רופאים מקצועי - ניסיון של עשרות שנים</h2></center>
             <img
               src={AI_IMAGE_PATH}
               alt="Doctor and dentist smiling"
@@ -70,6 +69,33 @@ function App() {
 
             {/* Doctors Grid */}
             <div className="doctors-grid">
+            <motion.div
+                className="doctor-card"
+                initial={{ opacity: 0, x: 40 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+              >
+                <img
+                  src="/CAMILLE.jpg"
+                  alt="Camille - Family Doctor"
+                  className="doctor-img"
+                  onError={(e) =>
+                    (e.currentTarget.src =
+                      "https://via.placeholder.com/150?text=Camille")
+                  }
+                />
+                <h3>ד״ר כמיל משעור</h3>
+                <h5> רופא משפחה - מכבי</h5>
+                <p>
+                  - רופא משפחה המספק ייעוץ רפואי מקיף לכל בני הבית<br/>
+                  - עצמאי<br/>
+                  - עובד עם מכבי<br/>
+                  - רופא משפחה לכל הגילאים<br/>
+                  - אין צורך בקביעת תור מראש<br/>
+<b>                  שעות פעילות: א׳–ה׳ 9:00–12:30  19:30-16:00 / ו׳ 9:00–12:30.</b><br/>
+                </p>
+              </motion.div>
+
               <motion.div
                 className="doctor-card"
                 initial={{ opacity: 0, x: -40 }}
@@ -85,34 +111,15 @@ function App() {
                       "https://via.placeholder.com/150?text=Sahar")
                   }
                 />
-                <h3>ד״ר סהר</h3>
+                <h3>ד״ר סחר משעור</h3>
+                <h5> רופאת שיניים</h5>
                 <p>
                   רופאת שיניים עם ניסיון רב בהליכים אסתטיים ורפואיים. 
                   זמינה לקבלת מטופלים בימים א׳–ה׳ בין השעות 9:00–18:00.
                 </p>
               </motion.div>
 
-              <motion.div
-                className="doctor-card"
-                initial={{ opacity: 0, x: 40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-              >
-                <img
-                  src="/CAMILLE.jpg"
-                  alt="Camille - Family Doctor"
-                  className="doctor-img"
-                  onError={(e) =>
-                    (e.currentTarget.src =
-                      "https://via.placeholder.com/150?text=Camille")
-                  }
-                />
-                <h3>ד״ר קמיל</h3>
-                <p>
-                  רופא משפחה המספק ייעוץ רפואי מקיף לכל בני הבית. 
-                  שעות פעילות: א׳–ד׳ 8:00–16:00, ה׳ 10:00–19:00.
-                </p>
-              </motion.div>
+              
             </div>
           </motion.section>
 
@@ -128,21 +135,11 @@ function App() {
             <button onClick={() => openMaps("waze")}>Open in Waze</button>
           </div>
           <p className="small-text">
-            הגעת ולא מצאת? צלצל : <a href={`tel:${CPHONE}`}>{DISPLAY_CPHONE}</a>
+            הגעת ולא מצאת? צלצל : <br/>
+            <a href={`tel:${CPHONE}`}>{DISPLAY_CPHONE}</a>
           </p>
         </section>
-          {/* Right - Contact */}
-          <section className="card">
-            <h2>Contact & Location</h2>
-            <p>Find us easily using your favorite maps app.</p>
-            <div className="map-buttons">
-              <button onClick={() => openMaps("google")}>Open in Google Maps</button>
-              <button onClick={() => openMaps("waze")}>Open in Waze</button>
-            </div>
-            <p className="small-text">
-              Or tap to call us: <a href={`tel:${CPHONE}`}>{DISPLAY_CPHONE}</a>
-            </p>
-          </section>
+        
 
           {/* Full width - Google Form */}
           <section className="card form-card">
