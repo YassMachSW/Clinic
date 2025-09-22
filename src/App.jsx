@@ -46,20 +46,7 @@ function App() {
           </a>
         </header>
 
-        {/* Location Section */}
-        <section className="card">
-          <h2>מיקום</h2>
-          <center>
-            <p>אנילביץ' 52 קומה 1 דירה 1.</p>
-          </center>
-          <div className="map-buttons">
-            <button onClick={() => openMaps("google")}>Open in Google Maps</button>
-            <button onClick={() => openMaps("waze")}>Open in Waze</button>
-          </div>
-          <p className="small-text">
-            הגעת ולא מצאת? צלצל : <a href={`tel:${CPHONE}`}>{DISPLAY_CPHONE}</a>
-          </p>
-        </section>
+        
 
         {/* Main content */}
         <main className="main">
@@ -130,7 +117,20 @@ function App() {
           </motion.section>
 
           <WhatsAppButton />
-
+{/* Location Section */}
+        <section className="card">
+          <h2>מיקום</h2>
+          <center>
+            <p>אנילביץ' 52 קומה 1 דירה 1.</p>
+          </center>
+          <div className="map-buttons">
+            <button onClick={() => openMaps("google")}>Open in Google Maps</button>
+            <button onClick={() => openMaps("waze")}>Open in Waze</button>
+          </div>
+          <p className="small-text">
+            הגעת ולא מצאת? צלצל : <a href={`tel:${CPHONE}`}>{DISPLAY_CPHONE}</a>
+          </p>
+        </section>
           {/* Right - Contact */}
           <section className="card">
             <h2>Contact & Location</h2>

@@ -145,8 +145,10 @@ html,
 .doctor-img {
   width: 140px;
   height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
+  border-radius: 12px; /* keep rounded corners but not a circle */
+  object-fit: contain; /* show the full picture without cropping */
   margin-bottom: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: #fff; /* add background so empty space looks clean */
+  padding: 4px; /* small padding so the image doesn't touch edges */
 }
