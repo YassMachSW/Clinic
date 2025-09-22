@@ -57,7 +57,7 @@ function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <center><h2>צוות רופאים מקצועי - ניסיון של עשרות שנים</h2></center>
+            <center><h2>צוות רופאים מקצועי <br/> </h2><h5>ניסיון של עשרות שנים</h5></center>
             <img
               src={AI_IMAGE_PATH}
               alt="Doctor and dentist smiling"
@@ -87,12 +87,18 @@ function App() {
                 <h3>ד״ר כמיל משעור</h3>
                 <h5> רופא משפחה - מכבי</h5>
                 <p>
-                  - רופא משפחה המספק ייעוץ רפואי מקיף לכל בני הבית<br/>
-                  - עצמאי<br/>
-                  - עובד עם מכבי<br/>
-                  - רופא משפחה לכל הגילאים<br/>
-                  - אין צורך בקביעת תור מראש<br/>
-<b>                  שעות פעילות: א׳–ה׳ 9:00–12:30  19:30-16:00 / ו׳ 9:00–12:30.</b><br/>
+                  <div>
+                    <ul>
+                      <li>רופא משפחה המספק ייעוץ רפואי לכל בני הבית</li>
+                      <li>עצמאי</li>
+                      <li>רופא משפחה לכל הגילאים</li>
+                      <li>אין צורך בקביעת תור מראש</li>
+                    </ul>
+                  </div>
+                  
+<b>                  שעות פעילות:<br/>
+ א׳–ה׳ 9:00–12:30 , 19:30-16:00 <br/>
+  ו׳ 9:00–12:30.</b><br/>
                 </p>
               </motion.div>
 
@@ -113,9 +119,27 @@ function App() {
                 />
                 <h3>ד״ר סחר משעור</h3>
                 <h5> רופאת שיניים</h5>
-                <p>
-                  רופאת שיניים עם ניסיון רב בהליכים אסתטיים ורפואיים. 
-                  זמינה לקבלת מטופלים בימים א׳–ה׳ בין השעות 9:00–18:00.
+                
+                 <p>
+                 
+                  <div>
+      <ul>
+        <li> עובדת עם חברות ביטוח:</li>
+          <ul>
+            <li>הראל</li>
+            <li>הפניקס</li>
+            <li>מגדל</li>
+            <li>מנורה</li>
+          </ul>
+        <li>רפואה משמרת</li>
+        <li>פרותטיקה</li>
+        <li>השתלות שיניים</li>
+        <li>קבלה לפי תור</li>
+      </ul>
+    </div>
+<b>                  שעות פעילות:<br/>
+ ב׳,ה׳ 9:00–12:30 , 18:30-16:00 <br/>
+  ג',ו׳ 9:00–12:30.</b><br/>
                 </p>
               </motion.div>
 
@@ -129,15 +153,17 @@ function App() {
           <h2>מיקום</h2>
           <center>
             <p>אנילביץ' 52 קומה 1 דירה 1.</p>
-          </center>
+          
           <div className="map-buttons">
-            <button onClick={() => openMaps("google")}>Open in Google Maps</button>
-            <button onClick={() => openMaps("waze")}>Open in Waze</button>
+            <button onClick={() => openMaps("google")}><img src="/GOOGLEMAP.png"></img></button>
+            <button onClick={() => openMaps("waze")}><img src="/WAZE.png"></img></button>
           </div>
+          
           <p className="small-text">
             הגעת ולא מצאת? צלצל : <br/>
             <a href={`tel:${CPHONE}`}>{DISPLAY_CPHONE}</a>
           </p>
+          </center>
         </section>
         
 
