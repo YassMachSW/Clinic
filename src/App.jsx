@@ -152,7 +152,7 @@ function App() {
         <section className="card">
           <h2>מיקום</h2>
           <center>
-            <p>אנילביץ' 52 קומה 1 דירה 1.</p>
+            <p>אניליבץ 51, דירה 2, קומה 1.</p>
           
           <div className="map-buttons">
             <button onClick={() => openMaps("google")}><img src="/GOOGLEMAP.png"></img></button>
